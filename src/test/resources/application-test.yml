@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 300000
+      leak-detection-threshold: 2000
+    username: db_user
+    password: db_pass
+    url: "jdbc:postgresql://localhost:6433/sku_info"
