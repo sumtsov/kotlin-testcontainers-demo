@@ -1,6 +1,6 @@
 package com.dsumtsov.kotlin.testcontainers.demo.service
 
-import com.dsumtsov.kotlin.testcontainers.demo.BaseIntegrationTest
+import com.dsumtsov.kotlin.testcontainers.demo.IntegrationTestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -10,7 +10,7 @@ import org.springframework.test.context.jdbc.Sql
     "classpath:sql/delete-test-data.sql",
     "classpath:sql/create-test-data.sql"
 )
-class SkuInfoServiceTest : BaseIntegrationTest() {
+class SkuInfoServiceTest : IntegrationTestBase() {
 
     @Autowired
     private lateinit var skuInfoService: SkuInfoService
